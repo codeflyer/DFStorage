@@ -1,0 +1,25 @@
+{
+    "appName": "DFStorage",
+    "server": {
+        "fullUrl" : "http://localhost:3000",
+        "protocol": "http",
+        "port": 3000,
+        "host": "localhost",
+        "proxy": {
+            "port": 8010
+        },
+        "tcp": {
+            "port": 9000
+        },
+        "udp": {
+            "address" : "127.0.0.1",
+            "port": 9002
+        }
+    },
+    "mongodb": {
+        "host": "127.0.0.1",
+        "port": 27017,
+        "db": "DFStorageStage",
+        "options": {}
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "globals": {
+    "Promise": true
+  },
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "newcap": true,
+  "nonbsp": true,
+  "unused": "vars",
+  "eqnull": true,
+  "node": true,
+  "devel": true,
+  "expr": true
+}
