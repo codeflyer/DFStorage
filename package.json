@@ -11,6 +11,11 @@
   ],
   "author": "Davide Fiorello <davide@codeflyer.com> (http://github.com/codeflyer/)",
   "license": "http://codeflyer.mit-license.org/",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/codeflyer/DFStorage/issues"
+  },
+  "homepage": "https://github.com/codeflyer/DFStorage",
   "dependencies": {
     "bluebird": "^2.3.11",
     "codeflyer-errorx": "^0.1.2",
