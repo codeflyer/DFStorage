@@ -1,30 +1,27 @@
 var path = require('path');
-var connectionManager = require('../connectionManager');
-var GridFsStorage = require('../../lib/storages/gridFs');
+var FileFsStorage = require('../../lib/storages/fileFs');
 var httpMocks = require('node-mocks-http');
 var EventEmitter = require('events').EventEmitter;
 var fs = require('fs');
 var fsUtils = require('../../lib/utils/fs');
 
-describe('GridFs load', function() {
+describe('FileFs load', function() {
 
   before(function(done) {
     require('readyness').doWhen(done);
   });
 
   beforeEach(function(done) {
-    var fixtures = connectionManager.getFixtures();
     var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
-    fixtures.clear(function(err) {
-      fsUtils.rmdir(rootPath).then(function() {
-        done();
-      });
+    fsUtils.rmdir(rootPath).then(function() {
+      done();
     });
   });
 
   it('Load a file', function(done) {
-    var storage = new GridFsStorage({
-      db: connectionManager.getConnection()
+    var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
+    var storage = new FileFsStorage({
+      path: rootPath
     });
 
     var sourceFile = path.join(__dirname, '..', 'sampleFiles', 'test.png');
@@ -46,8 +43,9 @@ describe('GridFs load', function() {
   });
 
   it('Load a file that not exists', function(done) {
-    var storage = new GridFsStorage({
-      db: connectionManager.getConnection()
+    var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
+    var storage = new FileFsStorage({
+      path: rootPath
     });
 
     var response = httpMocks.createResponse({eventEmitter: EventEmitter});

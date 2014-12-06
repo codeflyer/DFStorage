@@ -1,7 +1,6 @@
 var path = require('path');
 var connectionManager = require('../connectionManager');
 var GridFsStorage = require('../../lib/storages/gridFs');
-var constants = require('../../lib/constants');
 
 describe('GridFs save', function() {
 
@@ -13,7 +12,6 @@ describe('GridFs save', function() {
     var fixtures = connectionManager.getFixtures();
     fixtures.clear(function(err) {
       done();
-      //fixtures.load(__dirname + '/path/to/fixtures', done);
     });
   });
 

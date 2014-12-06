@@ -10,7 +10,7 @@
     "storage"
   ],
   "author": "Davide Fiorello <davide@codeflyer.com> (http://github.com/codeflyer/)",
-  "license": "ISC",
+  "license": "http://codeflyer.mit-license.org/",
   "dependencies": {
     "bluebird": "^2.3.11",
     "codeflyer-errorx": "^0.1.2",
@@ -18,7 +18,8 @@
     "gridfs-stream": "^0.5.3",
     "grunt": "^0.4.5",
     "log4js": "^0.6.21",
-    "mongodb": "^1.4.22"
+    "mongodb": "^1.4.22",
+    "node-fs": "^0.1.7"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",

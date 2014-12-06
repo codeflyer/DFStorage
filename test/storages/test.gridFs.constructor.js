@@ -24,6 +24,8 @@ describe('GridFs constructor', function() {
     } catch (e) {
       e.getCode().should.be.equal(constants.ERROR_STORAGE_PARAM_NOT_VALID);
     }
+
+
   });
 
   it('Initialize with db and default params', function() {

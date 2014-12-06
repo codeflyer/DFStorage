@@ -1,24 +1,24 @@
 var path = require('path');
-var connectionManager = require('../connectionManager');
-var GridFsStorage = require('../../lib/storages/gridFs');
+var FileFsStorage = require('../../lib/storages/fileFs');
+var fsUtils = require('../../lib/utils/fs');
 
-describe('GridFs exists', function() {
+describe('FileFs exists', function() {
 
   before(function(done) {
     require('readyness').doWhen(done);
   });
 
   beforeEach(function(done) {
-    var fixtures = connectionManager.getFixtures();
-    fixtures.clear(function(err) {
+    var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
+    fsUtils.rmdir(rootPath).then(function() {
       done();
-      //fixtures.load(__dirname + '/path/to/fixtures', done);
     });
   });
 
   it('Save a file and check if exists (true)', function(done) {
-    var storage = new GridFsStorage({
-      db: connectionManager.getConnection()
+    var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
+    var storage = new FileFsStorage({
+      path: rootPath
     });
 
     var sourceFile = path.join(__dirname, '..', 'sampleFiles', 'test.png');
@@ -36,8 +36,9 @@ describe('GridFs exists', function() {
   });
 
   it('Save a file and check if exists (false)', function(done) {
-    var storage = new GridFsStorage({
-      db: connectionManager.getConnection()
+    var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
+    var storage = new FileFsStorage({
+      path: rootPath
     });
 
     var sourceFile = path.join(__dirname, '..', 'sampleFiles', 'test.png');
