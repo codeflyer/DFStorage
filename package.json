@@ -1,6 +1,6 @@
 {
   "name": "df-storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A node.js module for the file storage management",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "storage", "gridfs", "mongodb", "file storage"
   ],
   "author": "Davide Fiorello <davide@codeflyer.com> (http://github.com/codeflyer/)",
-  "license": "http://codeflyer.mit-license.org/",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/codeflyer/DFStorage/issues"
