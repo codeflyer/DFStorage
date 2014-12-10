@@ -1,8 +1,14 @@
 DFStorage
 =======
 
+[![Build Status](https://drone.io/github.com/codeflyer/DFStorage/status.png)]
+(https://drone.io/github.com/codeflyer/DFStorage/latest)
+[![GitHub version](https://badge.fury.io/gh/codeflyer%2FDFStorage.svg)](http://badge.fury.io/gh/codeflyer%2FDFStorage)
+
 DFStorage is a module for the storage of file in different way.
 Currently supports storage in file system and in MongoDb GridFs.
+
+[Project Home Page](https://github.com/codeflyer/DFStorage)
 
 ##Quickstart
 ```javascript
@@ -126,10 +132,9 @@ Check if file exists
  * Improve my English!! :)
 
 #Contacts
-Davide Fiorello
-<davide@codeflyer.com>
-[<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_greytxt_80x15.png" width="80" height="15" border="0" alt="View Davide Fiorello's profile on LinkedIn">](http://it.linkedin.com/pub/davide-fiorello/2/20a/789)
-[GitHub](https://github.com/codeflyer)
+ * Davide Fiorello <davide@codeflyer.com>
+ * [<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_greytxt_80x15.png" width="80" height="15" border="0" alt="View Davide Fiorello's profile on LinkedIn">](http://it.linkedin.com/pub/davide-fiorello/2/20a/789)
+ * [GitHub](https://github.com/codeflyer)
 
 #License
 Copyright 2014 Davide Fiorello MIT License (enclosed)

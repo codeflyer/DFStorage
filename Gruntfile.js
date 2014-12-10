@@ -68,5 +68,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'jscs']);
   grunt.registerTask('test', ['mochaTest']);
-}
-;
+  grunt.registerTask('cover', ['mocha_istanbul']);
+};
