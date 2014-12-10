@@ -1,6 +1,6 @@
 {
   "name": "df-storage",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A node.js module for the file storage management",
   "main": "lib/index.js",
   "scripts": {

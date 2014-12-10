@@ -1,9 +1,8 @@
 DFStorage
 =======
 
-[![Build Status](https://drone.io/github.com/codeflyer/DFStorage/status.png)]
-(https://drone.io/github.com/codeflyer/DFStorage/latest)
-[![GitHub version](https://badge.fury.io/gh/codeflyer%2FDFStorage.svg)](http://badge.fury.io/gh/codeflyer%2FDFStorage)
+[![Build Status](https://drone.io/github.com/codeflyer/DFStorage/status.png)](https://drone.io/github.com/codeflyer/DFStorage/latest)
+[![npm version](https://badge.fury.io/js/df-storage.svg)](http://badge.fury.io/js/df-storage)
 
 DFStorage is a module for the storage of file in different way.
 Currently supports storage in file system and in MongoDb GridFs.
