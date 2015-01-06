@@ -1,13 +1,16 @@
 {
   "name": "df-storage",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A node.js module for the file storage management",
   "main": "lib/index.js",
   "scripts": {
     "test": "grunt test"
   },
   "keywords": [
-    "storage", "gridfs", "mongodb", "file storage"
+    "storage",
+    "gridfs",
+    "mongodb",
+    "file storage"
   ],
   "author": {
     "name": "Davide Fiorello",
@@ -32,7 +35,8 @@
     "grunt": "^0.4.5",
     "log4js": "^0.6.21",
     "mongodb": "^1.4.22",
-    "node-fs": "^0.1.7"
+    "node-fs": "^0.1.7",
+    "semaphore": "^1.0.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
