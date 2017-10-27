@@ -9,10 +9,6 @@ require('should');
 
 var config = require('config');
 
-var log4js = require('log4js');
-var logger = log4js.getLogger('main');
-logger.setLevel('TRACE');
-
 var connectionManager = require('./connectionManager');
 
 var ready = require('readyness');
@@ -22,7 +18,7 @@ MongoClient.connect(
     'mongodb://' +
     config.mongodb.host + ':' +
     config.mongodb.port + '/' +
-    config.mongodb.db, function(err, db) {
+    config.mongodb.db, function (err, db) {
       if (err) {
         throw err;
       }
@@ -32,7 +28,7 @@ MongoClient.connect(
 
 var fixtures = require('pow-mongodb-fixtures').connect(config.mongodb.db);
 var fixtureConnected = ready.waitFor('fixtureDbOk');
-fixtures.clear(function(err) {
+fixtures.clear(function (err) {
   fixtureConnected();
 });
 

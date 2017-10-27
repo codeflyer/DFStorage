@@ -13,9 +13,9 @@ describe('FileFs load', function() {
 
   beforeEach(function(done) {
     var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
-    fsUtils.rmdir(rootPath).then(function() {
-      done();
-    });
+    fsUtils.rmdir(rootPath)
+        .then(() => fsUtils.mkdir(rootPath))
+        .then(() => done());
   });
 
   it('Load a file', function(done) {

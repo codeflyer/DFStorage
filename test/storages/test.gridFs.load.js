@@ -16,9 +16,9 @@ describe('GridFs load', function() {
     var fixtures = connectionManager.getFixtures();
     var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
     fixtures.clear(function(err) {
-      fsUtils.rmdir(rootPath).then(function() {
-        done();
-      });
+      fsUtils.rmdir(rootPath)
+          .then(() => fsUtils.mkdir(rootPath))
+          .then(() => done());
     });
   });
 

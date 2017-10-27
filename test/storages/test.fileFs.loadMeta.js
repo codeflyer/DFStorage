@@ -10,9 +10,9 @@ describe('FileFs loadMeta', function() {
 
   beforeEach(function(done) {
     var rootPath = path.join(__dirname, '..', 'sampleFiles', 'dest');
-    fsUtils.rmdir(rootPath).then(function() {
-      done();
-    });
+    fsUtils.rmdir(rootPath)
+        .then(() => fsUtils.mkdir(rootPath))
+        .then(() => done());
   });
 
   it('Load meta after save', function(done) {
